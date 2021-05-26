@@ -22,7 +22,7 @@ requirements:
   run:
     - isort
     - python >=3.6
-    - python-language-server
+    - python-lsp-server
 
 test:
   imports:
