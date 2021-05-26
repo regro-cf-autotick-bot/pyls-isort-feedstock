@@ -1,5 +1,5 @@
 {% set name = "pyls-isort" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a6c292332746d3dc690f2a3dcdb9a01d913b9ee8444defe3cbffcddb7e3874eb
+  sha256: 2192bd2203db00459f85eb329521feba58af63075d2dd10a051a4eccd000bba0
 
 build:
   number: 0
@@ -18,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - isort
-    - python
-    - python-language-server
+    - python >=3.6
+    - python-lsp-server
 
 test:
   imports:
@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://github.com/paradoxxxzero/pyls-isort
-  summary: Isort plugin for python-language-server
+  summary: Isort plugin for python-lsp-server
   license: MIT
   license_file: LICENSE
 
